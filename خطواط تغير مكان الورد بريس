@@ -1,0 +1,22 @@
+1 - تنزيل المواقع و اصدار قاعدة البيانات 
+2-  رفع الموقع ورفع قاعدة البيانات للدومين الجديد
+3- تغير في wp-options الجدول الصفين الاولات غير دومين لدومين الجديد
+4- ندهب لsettings وبعدها permlinke ونختار custome structer 
+وبعدها نظيف 
+/index.php/%year%/%monthnum%/%day%/%postname%/ 
+وتخزين
+
+
+--------------------------------------------------
+5 - الكوريات المنقدة
+UPDATE wp_options SET option_value = replace(option_value, 'http://olddomain.com', 'http://newdomain.com') WHERE option_name = 'home' OR option_name = 'siteurl';
+
+UPDATE wp_posts SET guid = replace(guid, 'http://olddomain.com','http://newdomain.com');
+
+UPDATE wp_posts SET post_content = replace(post_content, 'http://olddomain.com', 'http://newdomain.com');
+
+UPDATE wp_postmeta SET meta_value = replace(meta_value, 'http://olddomain.com', 'http://newdomain.com');
+
+
+https://wordpress.stackexchange.com/questions/7693/what-sql-query-to-do-a-simple-find-and-replace
+
