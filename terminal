@@ -1,1 +1,6 @@
 sudo mount -o rw,remount '/media/abdullah/EL_ AMIR' 
+
+
+see another computer connected to the same network
+
+by this command : arp-scan --localnet
